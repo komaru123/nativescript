@@ -1,0 +1,18 @@
+<!-- <TextField hint="Enter date" secure="false" returnKeyType="done" returnPress="onReturnPress" autocorrect="false" focus="onFocus"
+    blur="onBlur" class="input input-border"></TextField> -->
+<!-- <GridLayout>
+<StackLayout>
+    <Label [hint]="pickerHint" text="tap on the picker to choose items"></Label>
+</StackLayout> -->
+    <AbsoluteLayout>
+        <StackLayout class="pickerView" left="0" [width]="platformInformationService.screenInformation.widthDIPs" [height]="platformInformationService.screenInformation.heightDIPs * 2/5" 
+        [top]="platformInformationService.screenInformation.heightDIPs * 3/5">
+        <StackLayout>
+            <Button text="Done" width="80" horizontalAlignment="right" (tap)="doneButtonTapped()" style="background: transparent; float:right; margin-right: 0px"></Button>
+        </StackLayout>
+        
+        <ListPicker class="picker" [items]="pickerItems" [selectedIndex]="selectedIndex" (selectedIndexChange)="indexChanged($event)"></ListPicker>
+        
+    </StackLayout>
+</AbsoluteLayout>
+<!-- </GridLayout> -->
